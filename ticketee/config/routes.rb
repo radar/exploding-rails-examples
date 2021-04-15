@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "projects/projects#index"
 
-  namespace :projects do
+  scope module: :projects, as: :projects do
     resources :projects
   end
 end

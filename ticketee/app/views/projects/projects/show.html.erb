@@ -1,1 +1,7 @@
 <h2 class='text-4xl my-4'><%= @project.name %></h2>
+
+<h3>Contributors (<%= @contributor_count %>)</h3>
+
+<% @top_contributors.each do |contributor| %>
+  <%= contributor.username %>
+<% end %>

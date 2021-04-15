@@ -16,4 +16,12 @@ class UserRepository < ROM::Repository::Root
   def contributors_for_project(project_id)
     users.contributors_for_project(project_id).to_a
   end
+
+  def contributors_for_project_count(project_id)
+    users.contributors_for_project(project_id).count
+  end
+
+  def top_contributors_for_project(project_id)
+    users.top_contributors_for_project(project_id)
+  end
 end
